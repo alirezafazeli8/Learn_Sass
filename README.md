@@ -2,7 +2,7 @@
 i learned sass and now i uploaded this simple project . just this project for my learning.
 
 The Sass Topics that i used in the simple project:
-<br>
+<hr>
 1- Sass Variable
 <br>
 2- Nesting Styles
@@ -22,5 +22,5 @@ The Sass Topics that i used in the simple project:
 9- @Content KeyWords = With this you can make responsive your template in quick time and very simple.
 <br>
 10- if statements.
-<br>
-notic: in this template i just a use some of this properties and but this all property in this source but i dont use it.
+<hr>
+<h2>notic: in this template i just a use some of this properties and but this all property in this source but i dont use it.</h2?
