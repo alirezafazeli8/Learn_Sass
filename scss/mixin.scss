@@ -1,0 +1,88 @@
+@import "variable.scss";
+// mixin
+@mixin part-one-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: $niceBlue;
+    max-width: 60%;
+    margin: auto;
+    border-bottom: 2px $dead_blue solid;
+
+    &:first-child {
+        margin-top: 30px;
+    }
+
+    h1{
+        color: $dead_blue;
+        padding: 5px;
+        font-size: 30px;
+    }
+
+    p {
+        color: white;
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    img {
+        max-width: 500px;
+    }
+}
+
+// hover mixin
+
+@mixin hover { // create pseudo class
+    &:hover {
+        background-color: slategrey;
+    }
+}
+
+// grid system
+@mixin grid($column, $size, $gap){
+    ul {
+        display: grid;
+        grid-template-columns: repeat($column, $size);
+        gap: $gap;
+    }
+}
+
+// flex center
+
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+//__**__ Media Query  __**__
+@mixin media_query($min, $max) {
+    @media screen and (min-width: $min) and (max-width: $max) {
+        @content
+    }
+
+
+    @if $min == 320 { 
+        h1 {
+            color: brown;
+        }
+    } @else if $min == 550 {
+        h1 {
+            // color: blue;
+        }
+    } @else {
+        h1 {
+            //nothing
+        }
+    } // end if statement
+}
+
+@mixin tablet_query($min) {
+    @media screen and (min-width: $min) {
+        @content
+    }
+}

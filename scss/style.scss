@@ -1,0 +1,119 @@
+// import moduls
+@import 'mixin.scss';
+@import 'reset.scss';
+@import 'variable.scss';
+
+body {
+    background-color: #161B22;
+}
+
+// nested list in sass
+.myHeading {
+    display: flex;
+    justify-content: space-between;
+    background-color: $dead_blue;
+
+    h1 {
+        padding: (10px * 2); // amalgar manteghi
+        color: $niceBlue;
+
+        //mobile media query
+        @include media_query(320px, 500px) {
+            padding: 0;
+        }
+        
+    }
+
+    ul {
+        display: flex;
+        padding: $normalSize;
+        justify-content: flex-end;
+        align-items: center;
+
+        //mobile media query
+        @include media_query(320px, 500px) {
+            padding: 10px;
+            flex-direction: column;
+        }   
+    }
+
+    li {
+        a {
+            color: $whiteColor;
+            padding: $normalSize;
+            font-size: $normalSize;
+            @include hover; // use pseudo class
+        }
+
+        //mobile media query
+        @include media_query(320px, 500px) {
+            padding: 5px;
+        }
+    }
+
+    //mobile media query
+    @include media_query(320px, 500px) {
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    //tablet media query
+    @include media_query(501px, 1000px) {
+        width: 100%;
+    }
+} // end MyHeading Style
+
+.part_one {
+    max-width: 100%;
+}
+
+.article {
+    @include part-one-style();
+    //mobile media query
+    @include media_query(320px, 500px) {
+        max-width: 100%;
+        text-align: center;
+        img {
+            height: 300px;
+        }
+    }
+}
+
+// grid gallery
+.gallery {
+    padding: 20px;
+    text-align: center;
+    @include grid(5, auto, 10px);
+    h1 {
+        padding: 10px;
+        font-size: 30px;
+        color: darken($dead_blue, 2); // color function
+        color: $niceBlue;
+    }
+
+    //mobile media query
+    @include media_query(320px, 500px) {
+        padding: 20px;
+        @include grid(1, auto, 2px);
+    }
+
+    //tablet media query
+    @include tablet_query(501px) {
+        @include grid(2, auto, 2px);
+    }
+
+    // ipad pro
+    @include media_query(768px, 1024px) {
+        padding: 20px;
+        @include grid(3, auto, 2px);
+    }
+}
+
+// footer
+
+footer {
+    background-color: $niceBlue;
+    padding: 20px;
+    text-align: center;
+}
