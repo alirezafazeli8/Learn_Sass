@@ -20,8 +20,7 @@ body {
         //mobile media query
         @include media_query(320px, 500px) {
             padding: 0;
-        }
-        
+        }   
     }
 
     ul {
@@ -59,7 +58,7 @@ body {
     }
 
     //tablet media query
-    @include media_query(501px, 1000px) {
+    @include tablet_query(501px) {
         width: 100%;
     }
 } // end MyHeading Style
@@ -104,7 +103,7 @@ body {
     }
 
     // ipad pro
-    @include media_query(768px, 1024px) {
+    @include media_query(1024PX, 1366PX) {
         padding: 20px;
         @include grid(3, auto, 2px);
     }
