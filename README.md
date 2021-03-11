@@ -1,5 +1,5 @@
 # Learn_Sass
-i learned sass and now i uploaded this simple project . just this project for my learning.
+I learned sass and now i uploaded this simple project . just this project for my learning.
 
 The Sass Topics that i used in the simple project:
 <hr>
